@@ -1,0 +1,31 @@
+{
+  "name": "hotelnoma",
+  "version": "1.0.0",
+  "description": "Website for a fictitious hotel in San Francisco, CA",
+  "main": "index.js",
+  "engines": {
+    "node": "8.2.1",
+    "npm": "5.4.1"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "author": "Alex Ha",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.0",
+    "cors": "^2.8.4",
+    "express": "^4.17.1",
+    "mongo": "^0.1.0",
+    "mongodb": "^3.6.3",
+    "mongoose": "^4.11.10",
+    "nodemailer": "^4.1.1",
+    "npm": "^6.14.8",
+    "stripe": "^5.1.0"
+  }
+}
